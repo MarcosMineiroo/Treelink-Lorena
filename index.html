@@ -101,29 +101,29 @@
         </div>
     </div>
     
-   <script>
+    <script>
         // --- JAVASCRIPT DO MODAL ---
         const modal = document.getElementById("profile-modal");
         const openModalBtn = document.getElementById("open-modal-btn");
         const closeModalBtn = document.getElementsByClassName("close-btn")[0];
-
-        openModalBtn.onclick = function(e) {
-            e.preventDefault();
-            modal.style.display = "block";
-            document.body.classList.add('modal-open'); /* Trava/Destrava o scroll */
-        }
-
-        closeModalBtn.onclick = function() {
-            modal.style.display = "none";
-            document.body.classList.remove('modal-open'); /* Trava/Destrava o scroll */
-        }
-
-        window.onclick = function(e) {
-            if (e.target == modal) {
+        if (openModalBtn) { // Garante que o script não quebre na página de projetos
+            openModalBtn.onclick = function(e) {
+                e.preventDefault();
+                modal.style.display = "block";
+                document.body.classList.add('modal-open');
+            }
+            closeModalBtn.onclick = function() {
                 modal.style.display = "none";
-                document.body.classList.remove('modal-open'); /* Trava/Destrava o scroll */
+                document.body.classList.remove('modal-open');
+            }
+            window.onclick = function(e) {
+                if (e.target == modal) {
+                    modal.style.display = "none";
+                    document.body.classList.remove('modal-open');
+                }
             }
         }
+
 
         // --- JAVASCRIPT DO ACCORDION ---
         document.querySelectorAll(".accordion-header").forEach(h => {
@@ -131,6 +131,46 @@
                 h.classList.toggle("active");
                 const c = h.nextElementSibling;
                 c.style.maxHeight = c.style.maxHeight ? null : c.scrollHeight + "px";
+            });
+        });
+
+        // --- JAVASCRIPT CORRIGIDO PARA ROLAGEM MANUAL (DRAG-TO-SCROLL) ---
+        const scrollContainers = document.querySelectorAll('.social-icons, .awards-section-v3, .horizontal-gallery');
+
+        scrollContainers.forEach(container => {
+            const slider = container.querySelector('.scrolling-wrapper');
+            let isDown = false;
+            let startX;
+            let scrollLeft;
+
+            container.addEventListener('mousedown', (e) => {
+                isDown = true;
+                slider.classList.add('grabbing');
+                startX = e.pageX - container.offsetLeft;
+                scrollLeft = container.scrollLeft;
+                slider.style.animationPlayState = 'paused';
+            });
+
+            container.addEventListener('mouseleave', () => {
+                if (!isDown) return;
+                isDown = false;
+                slider.classList.remove('grabbing');
+                slider.style.animationPlayState = 'running';
+            });
+
+            container.addEventListener('mouseup', () => {
+                if (!isDown) return;
+                isDown = false;
+                slider.classList.remove('grabbing');
+                slider.style.animationPlayState = 'running';
+            });
+
+            container.addEventListener('mousemove', (e) => {
+                if (!isDown) return;
+                e.preventDefault();
+                const x = e.pageX - container.offsetLeft;
+                const walk = (x - startX) * 2; // Multiplicador de velocidade do arrasto
+                container.scrollLeft = scrollLeft - walk;
             });
         });
     </script>

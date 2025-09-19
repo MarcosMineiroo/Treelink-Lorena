@@ -51,5 +51,51 @@
             </section>
         </div>
     </section>
+    </section>
+
+    <script>
+       // --- JAVASCRIPT CORRIGIDO PARA ROLAGEM MANUAL (DRAG-TO-SCROLL) ---
+        const scrollContainers = document.querySelectorAll('.social-icons, .awards-section-v3, .horizontal-gallery');
+
+        scrollContainers.forEach(container => {
+            const slider = container.querySelector('.scrolling-wrapper');
+            let isDown = false;
+            let startX;
+            let scrollLeft;
+
+            container.addEventListener('mousedown', (e) => {
+                isDown = true;
+                slider.classList.add('grabbing');
+                startX = e.pageX - container.offsetLeft;
+                scrollLeft = container.scrollLeft;
+                slider.style.animationPlayState = 'paused';
+            });
+
+            container.addEventListener('mouseleave', () => {
+                if (!isDown) return;
+                isDown = false;
+                slider.classList.remove('grabbing');
+                slider.style.animationPlayState = 'running';
+            });
+
+            container.addEventListener('mouseup', () => {
+                if (!isDown) return;
+                isDown = false;
+                slider.classList.remove('grabbing');
+                slider.style.animationPlayState = 'running';
+            });
+
+            container.addEventListener('mousemove', (e) => {
+                if (!isDown) return;
+                e.preventDefault();
+                const x = e.pageX - container.offsetLeft;
+                const walk = (x - startX) * 2; // Multiplicador de velocidade do arrasto
+                container.scrollLeft = scrollLeft - walk;
+            });
+        });
+    </script>
+</body>
+</html>
+
 </body>
 </html>

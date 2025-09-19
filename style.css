@@ -91,7 +91,16 @@ footer { margin-top: 40px; padding: 20px; font-size: 12px; color: var(--text-col
 .horizontal-gallery { margin-top: 60px; }
 .horizontal-gallery .scrolling-wrapper { gap: 20px; animation-direction: reverse; }
 .horizontal-gallery img { height: 200px; width: auto; border-radius: 8px; }
+/* Adicione este código ao seu style.css */
 
+.scrolling-wrapper {
+    cursor: grab; /* Cursor de "mãozinha" */
+    user-select: none; /* Impede que o texto seja selecionado ao arrastar */
+}
+
+.scrolling-wrapper.grabbing {
+    cursor: grabbing; /* Cursor de "mão fechada" ao arrastar */
+}
 /* --- MODAL DE PERFIL --- */
 .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.8); backdrop-filter: blur(5px); }
 .modal-content { background-color: #1a1a1a; margin: 5% auto; padding: 40px; border: 1px solid #444; border-radius: 15px; width: 90%; max-width: 800px; position: relative; animation: fadeIn 0.5s; text-align: left; }
