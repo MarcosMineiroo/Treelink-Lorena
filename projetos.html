@@ -30,6 +30,8 @@
                 <div class="stat-box shape3"><strong>Shows de estreia</strong><span>esgotados</span></div>
             </section>
             
+            <h2 class="section-title">Prêmios do Álbum</h2>
+            
             <section class="awards-section-v3">
                 <div class="scrolling-wrapper">
                     <div class="award-item-v3"><img src="img/trofeu.png" alt="Prêmio"><p>Leão de Bronze<span>Cannes Lions 2023</span></p></div>
@@ -44,6 +46,9 @@
             <section class="project-section">
                 <p>No show de estreia da turnê, ficamos responsáveis pela Direção de Vídeo, desde o conceito até a finalização do Registro Audiovisual "ICARUS AO VIVO".</p>
             </section>
+            
+            <h2 class="section-title">Galeria de Fotos</h2>
+
              <section class="horizontal-gallery">
                 <div class="scrolling-wrapper">
                     <img src="img/bk-1.jpg" alt="Capa do album Icarus"><img src="https://pbs.twimg.com/media/FjO75QdWIAc194O.jpg" alt="BK no palco"><img src="img/bk-3.webp" alt="Foto de BK"><img src="img/bk-2.webp" alt="Show ICARUS"><img src="img/bk-4.jpg" alt="Capa do album Icarus"><img src="img/bk-3.webp" alt="BK no palco"><img src="img/album-icarus.jpeg" alt="Foto de BK"><img src="img/bk-4.jpg" alt="Show ICARUS">
@@ -51,51 +56,17 @@
             </section>
         </div>
     </section>
-    </section>
 
     <script>
-       // --- JAVASCRIPT CORRIGIDO PARA ROLAGEM MANUAL (DRAG-TO-SCROLL) ---
-        const scrollContainers = document.querySelectorAll('.social-icons, .awards-section-v3, .horizontal-gallery');
-
-        scrollContainers.forEach(container => {
-            const slider = container.querySelector('.scrolling-wrapper');
-            let isDown = false;
-            let startX;
-            let scrollLeft;
-
-            container.addEventListener('mousedown', (e) => {
-                isDown = true;
-                slider.classList.add('grabbing');
-                startX = e.pageX - container.offsetLeft;
-                scrollLeft = container.scrollLeft;
-                slider.style.animationPlayState = 'paused';
-            });
-
-            container.addEventListener('mouseleave', () => {
-                if (!isDown) return;
-                isDown = false;
-                slider.classList.remove('grabbing');
-                slider.style.animationPlayState = 'running';
-            });
-
-            container.addEventListener('mouseup', () => {
-                if (!isDown) return;
-                isDown = false;
-                slider.classList.remove('grabbing');
-                slider.style.animationPlayState = 'running';
-            });
-
-            container.addEventListener('mousemove', (e) => {
-                if (!isDown) return;
-                e.preventDefault();
-                const x = e.pageX - container.offsetLeft;
-                const walk = (x - startX) * 2; // Multiplicador de velocidade do arrasto
-                container.scrollLeft = scrollLeft - walk;
-            });
-        });
+       const scrollContainers = document.querySelectorAll('.social-icons, .awards-section-v3, .horizontal-gallery');
+       scrollContainers.forEach(container => {
+           const slider = container.querySelector('.scrolling-wrapper');
+           let isDown = false; let startX; let scrollLeft;
+           container.addEventListener('mousedown', (e) => { isDown = true; slider.classList.add('grabbing'); startX = e.pageX - container.offsetLeft; scrollLeft = container.scrollLeft; slider.style.animationPlayState = 'paused'; });
+           container.addEventListener('mouseleave', () => { if (!isDown) return; isDown = false; slider.classList.remove('grabbing'); slider.style.animationPlayState = 'running'; });
+           container.addEventListener('mouseup', () => { if (!isDown) return; isDown = false; slider.classList.remove('grabbing'); slider.style.animationPlayState = 'running'; });
+           container.addEventListener('mousemove', (e) => { if (!isDown) return; e.preventDefault(); const x = e.pageX - container.offsetLeft; const walk = (x - startX) * 2; container.scrollLeft = scrollLeft - walk; });
+       });
     </script>
-</body>
-</html>
-
 </body>
 </html>

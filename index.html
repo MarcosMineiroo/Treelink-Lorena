@@ -17,22 +17,19 @@
         <img class="profile-pic" src="img/perfil.jpg" alt="Foto de Perfil de Lorena Nayelle">
 
         <header class="user-info">
-            <a href="#" id="open-modal-btn"><h1>Lorena Nayelle</h1></a>
-            <p class="username">@lorena.nayelle</p>
+            <a href="#" class="modal-trigger"><h1>Lorena Nayelle</h1></a>
+            
+            <div class="action-buttons">
+                <a href="#" class="action-btn modal-trigger">
+                    <img src="img/perfil2.png" alt="Ícone Sobre Mim" class="action-btn-icon">
+                </a>
+            </div>
+
             <p class="bio">Estratégia digital | Planejamento e Conteúdo | Creative PR</p>
         </header>
 
         <section class="social-icons">
-            <div class="scrolling-wrapper">
-                <a href="#" target="_blank"><img src="https://media.link.me/cdn-cgi/image/width=160,height=160,quality=90,format=webp/images/style/icons/v5.0/Instagram-2.png" alt="Instagram"></a>
-                <a href="https://www.linkedin.com/in/lorenanayelle" target="_blank"><img src="https://media.link.me/cdn-cgi/image/width=160,height=160,quality=90,format=webp/images/style/icons/v5.0/LinkedIn-2.png" alt="LinkedIn"></a>
-                <a href="https://wa.me/5598981974032" target="_blank"><img src="https://media.link.me/cdn-cgi/image/width=160,height=160,quality=90,format=webp/images/style/icons/v5.0/WhatsApp-2.png" alt="WhatsApp"></a>
-                <a href="#" target="_blank"><img src="https://media.link.me/cdn-cgi/image/width=160,height=160,quality=90,format=webp/images/static/icons/v5.1/twitter-dark-2.png" alt="Twitter/X"></a>
-                <a href="#" target="_blank"><img src="https://media.link.me/cdn-cgi/image/width=160,height=160,quality=90,format=webp/images/style/icons/v5.0/Instagram-2.png" alt="Instagram"></a>
-                <a href="https://www.linkedin.com/in/lorenanayelle" target="_blank"><img src="https://media.link.me/cdn-cgi/image/width=160,height=160,quality=90,format=webp/images/style/icons/v5.0/LinkedIn-2.png" alt="LinkedIn"></a>
-                <a href="https://wa.me/5598981974032" target="_blank"><img src="https://media.link.me/cdn-cgi/image/width=160,height=160,quality=90,format=webp/images/style/icons/v5.0/WhatsApp-2.png" alt="WhatsApp"></a>
-                <a href="#" target="_blank"><img src="https://media.link.me/cdn-cgi/image/width=160,height=160,quality=90,format=webp/images/static/icons/v5.1/twitter-dark-2.png" alt="Twitter/X"></a>
-
+             <div class="scrolling-wrapper">
                 <a href="#" target="_blank"><img src="https://media.link.me/cdn-cgi/image/width=160,height=160,quality=90,format=webp/images/style/icons/v5.0/Instagram-2.png" alt="Instagram"></a>
                 <a href="https://www.linkedin.com/in/lorenanayelle" target="_blank"><img src="https://media.link.me/cdn-cgi/image/width=160,height=160,quality=90,format=webp/images/style/icons/v5.0/LinkedIn-2.png" alt="LinkedIn"></a>
                 <a href="https://wa.me/5598981974032" target="_blank"><img src="https://media.link.me/cdn-cgi/image/width=160,height=160,quality=90,format=webp/images/style/icons/v5.0/WhatsApp-2.png" alt="WhatsApp"></a>
@@ -44,28 +41,59 @@
             </div>
         </section>
 
-        <section class="image-gallery">
-            <a href="projetos.html#projeto-bk" class="gallery-item">
-                <img src="img/bk-icarus.png" alt="BK'" class="gallery-background">
-                <img src="https://media.link.me/cdn-cgi/image/width=160,height=160,quality=90,format=webp/images/style/icons/v5.0/Spotify-2.png" alt="Ícone Spotify" class="gallery-icon">
-                <span class="gallery-label">Case: Álbum ICARUS do BK'</span>
-            </a>
-            <a href="#" class="gallery-item">
-                <img src="https://www.tenhomaisdiscosqueamigos.com/wp-content/uploads/2021/11/liniker-e-os-caramelows-show-696x463.jpg" alt="Liniker" class="gallery-background">
-                <img src="https://media.link.me/cdn-cgi/image/width=160,height=160,quality=90,format=webp/images/style/icons/v5.0/Youtube-Music-2.png" alt="Ícone YouTube" class="gallery-icon">
-                <span class="gallery-label">Clipe da Liniker</span>
-            </a>
-            <a href="#" class="gallery-item">
-                <img src="https://portalpopline.com.br/wp-content/uploads/2023/07/samuel-rosa-turne-despedida-skank.jpg" alt="Samuel Rosa" class="gallery-background">
-                 <img src="https://media.link.me/cdn-cgi/image/width=64,quality=90,format=webp/images/static/icon/link.png" alt="Ícone Link" class="gallery-icon">
-                <span class="gallery-label">Matéria sobre Samuel Rosa</span>
-            </a>
-            <a href="#" class="gallery-item">
-                <img src="https://www.papelpop.com/wp-content/uploads/2022/10/iza-1.jpg" alt="Iza" class="gallery-background">
-                <img src="https://media.link.me/cdn-cgi/image/width=160,height=160,quality=90,format=webp/images/style/icons/v5.0/Instagram-2.png" alt="Ícone Instagram" class="gallery-icon">
-                <span class="gallery-label">Post da IZA no Instagram</span>
-            </a>
-        </section>
+        <div class="work-filter-tabs">
+            <button class="tab-btn active" data-filter="clt">CLT</button>
+            <button class="tab-btn" data-filter="freelancer">Freelancer</button>
+        </div>
+
+        <div class="gallery-container">
+            <section class="image-gallery gallery-clt active">
+                <a href="projetos.html#projeto-bk" class="gallery-item">
+                    <img src="img/album-icarus.jpeg" alt="BK'" class="gallery-background">
+                    <img src="https://media.link.me/cdn-cgi/image/width=160,height=160,quality=90,format=webp/images/style/icons/v5.0/Spotify-2.png" alt="Ícone Spotify" class="gallery-icon">
+                    <span class="gallery-label">Case: Álbum ICARUS do BK'</span>
+                </a>
+                <a href="#" class="gallery-item">
+                    <img src="https://portalpopline.com.br/wp-content/uploads/2023/07/samuel-rosa-turne-despedida-skank.jpg" alt="Samuel Rosa" class="gallery-background">
+                     <img src="https://media.link.me/cdn-cgi/image/width=64,quality=90,format=webp/images/static/icon/link.png" alt="Ícone Link" class="gallery-icon">
+                    <span class="gallery-label">Matéria sobre Samuel Rosa</span>
+                </a>
+                <a href="#" class="gallery-item">
+                    <img src="img/album-liniker.jpeg" alt="Liniker" class="gallery-background">
+                    <img src="https://media.link.me/cdn-cgi/image/width=160,height=160,quality=90,format=webp/images/style/icons/v5.0/Youtube-Music-2.png" alt="Ícone YouTube" class="gallery-icon">
+                    <span class="gallery-label">Álbum da Liniker</span>
+                </a>
+                <a href="#" class="gallery-item">
+                    <img src="https://www.papelpop.com/wp-content/uploads/2022/10/iza-1.jpg" alt="Iza" class="gallery-background">
+                    <img src="https://media.link.me/cdn-cgi/image/width=160,height=160,quality=90,format=webp/images/style/icons/v5.0/Instagram-2.png" alt="Ícone Instagram" class="gallery-icon">
+                    <span class="gallery-label">Post da IZA no Instagram</span>
+                </a>
+            </section>
+
+            <section class="image-gallery gallery-freelancer">
+                <a href="projetos.html#projeto-bk" class="gallery-item">
+                    <img src="img/album-icarus.jpeg" alt="BK'" class="gallery-background">
+                    <img src="https://media.link.me/cdn-cgi/image/width=160,height=160,quality=90,format=webp/images/style/icons/v5.0/Spotify-2.png" alt="Ícone Spotify" class="gallery-icon">
+                    <span class="gallery-label">Case: Álbum ICARUS do BK'</span>
+                </a>
+                <a href="#" class="gallery-item">
+                    <img src="https://portalpopline.com.br/wp-content/uploads/2023/07/samuel-rosa-turne-despedida-skank.jpg" alt="Samuel Rosa" class="gallery-background">
+                     <img src="https://media.link.me/cdn-cgi/image/width=64,quality=90,format=webp/images/static/icon/link.png" alt="Ícone Link" class="gallery-icon">
+                    <span class="gallery-label">Matéria sobre Samuel Rosa</span>
+                </a>
+                
+                <a href="#" class="gallery-item">
+                    <img src="img/album-liniker.jpeg" alt="Liniker" class="gallery-background">
+                    <img src="https://media.link.me/cdn-cgi/image/width=160,height=160,quality=90,format=webp/images/style/icons/v5.0/Youtube-Music-2.png" alt="Ícone YouTube" class="gallery-icon">
+                    <span class="gallery-label">Álbum da Liniker</span>
+                </a>
+                <a href="#" class="gallery-item">
+                    <img src="https://www.papelpop.com/wp-content/uploads/2022/10/iza-1.jpg" alt="Iza" class="gallery-background">
+                    <img src="https://media.link.me/cdn-cgi/image/width=160,height=160,quality=90,format=webp/images/style/icons/v5.0/Instagram-2.png" alt="Ícone Instagram" class="gallery-icon">
+                    <span class="gallery-label">Post da IZA no Instagram</span>
+                </a>
+            </section>
+        </div>
         
         <section class="contact-accordion">
              <div class="accordion-item">
@@ -89,7 +117,7 @@
                 <p class="modal-subtitle">Estratégia digital | Planejamento e Conteúdo | Creative PR</p>
             </div>
             <div class="modal-body">
-                <div class="modal-section"><h3>Resumo</h3><p>Estrategista digital com mais de cinco anos de experiência em mídias sociais e projetos no universo da música e do entretenimento. Acredita que uma boa estratégia digital envolve identificação, histórias bem contadas e a construção de comunidades engajadas.</p><p>Ao longo da carreira, colaborei com artistas e marcas como Liniker, Skank, BK', Samuel Rosa, Warner Chappell Music, Tiago lorc, e muitos outros.</p></div>
+                <div class="modal-section"><h3>Resumo</h3><p>Estrategista digital com mais de cinco anos de experiência em mídias sociais e projetos no universo da música e do entretenimento. Acredita que uma boa estratégia digital envolve identificação, histórias bem contadas e a construção de comunidades engajadas.</p><p>Ao longo da carreira, colaborou com artistas e marcas como Liniker, Skank, BK', Samuel Rosa, Warner Chappell Music, Tiago lorc, e muitos outros.</p></div>
                 <div class="modal-section"><h3>Principais Competências</h3><ul class="skills-list"><li>Estratégia</li><li>Estratégia Digital</li><li>Planejamento de Comunicação 360°</li><li>Produção de Conteúdo</li><li>Branding</li></ul></div>
                 <div class="modal-section"><h3>Experiência em Destaque</h3><p><strong>Planejamento na b+ca (4+ anos)</strong><br>Desenvolvimento e execução de planejamentos estratégicos de comunicação digital para artistas e projetos de música e entretenimento.</p></div>
                 <div class="modal-section"><h3>Formação</h3><p><strong>Graduação em Comunicação Social: Relações Públicas</strong><br>UFMA - Universidade Federal do Maranhão (2020 - 2025)</p><p><strong>Extensão em Música & Negócios</strong><br>CCE-PUC-Rio (2021)</p></div>
@@ -104,26 +132,25 @@
     <script>
         // --- JAVASCRIPT DO MODAL ---
         const modal = document.getElementById("profile-modal");
-        const openModalBtn = document.getElementById("open-modal-btn");
+        const openModalTriggers = document.querySelectorAll(".modal-trigger");
         const closeModalBtn = document.getElementsByClassName("close-btn")[0];
-        if (openModalBtn) { // Garante que o script não quebre na página de projetos
-            openModalBtn.onclick = function(e) {
+        openModalTriggers.forEach(trigger => {
+            trigger.addEventListener("click", function(e) {
                 e.preventDefault();
                 modal.style.display = "block";
                 document.body.classList.add('modal-open');
-            }
-            closeModalBtn.onclick = function() {
+            });
+        });
+        closeModalBtn.onclick = function() {
+            modal.style.display = "none";
+            document.body.classList.remove('modal-open');
+        }
+        window.onclick = function(e) {
+            if (e.target == modal) {
                 modal.style.display = "none";
                 document.body.classList.remove('modal-open');
             }
-            window.onclick = function(e) {
-                if (e.target == modal) {
-                    modal.style.display = "none";
-                    document.body.classList.remove('modal-open');
-                }
-            }
         }
-
 
         // --- JAVASCRIPT DO ACCORDION ---
         document.querySelectorAll(".accordion-header").forEach(h => {
@@ -133,45 +160,30 @@
                 c.style.maxHeight = c.style.maxHeight ? null : c.scrollHeight + "px";
             });
         });
+        
+        // --- JAVASCRIPT PARA FILTRO DE GALERIA ---
+        const filterBtns = document.querySelectorAll('.work-filter-tabs .tab-btn');
+        const galleries = document.querySelectorAll('.gallery-container .image-gallery');
+        filterBtns.forEach(button => {
+            button.addEventListener('click', () => {
+                const filter = button.getAttribute('data-filter');
+                filterBtns.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                galleries.forEach(gallery => {
+                    gallery.classList.toggle('active', gallery.classList.contains('gallery-' + filter));
+                });
+            });
+        });
 
-        // --- JAVASCRIPT CORRIGIDO PARA ROLAGEM MANUAL (DRAG-TO-SCROLL) ---
-        const scrollContainers = document.querySelectorAll('.social-icons, .awards-section-v3, .horizontal-gallery');
-
+        // --- JAVASCRIPT PARA ROLAGEM MANUAL ---
+        const scrollContainers = document.querySelectorAll('.social-icons');
         scrollContainers.forEach(container => {
             const slider = container.querySelector('.scrolling-wrapper');
-            let isDown = false;
-            let startX;
-            let scrollLeft;
-
-            container.addEventListener('mousedown', (e) => {
-                isDown = true;
-                slider.classList.add('grabbing');
-                startX = e.pageX - container.offsetLeft;
-                scrollLeft = container.scrollLeft;
-                slider.style.animationPlayState = 'paused';
-            });
-
-            container.addEventListener('mouseleave', () => {
-                if (!isDown) return;
-                isDown = false;
-                slider.classList.remove('grabbing');
-                slider.style.animationPlayState = 'running';
-            });
-
-            container.addEventListener('mouseup', () => {
-                if (!isDown) return;
-                isDown = false;
-                slider.classList.remove('grabbing');
-                slider.style.animationPlayState = 'running';
-            });
-
-            container.addEventListener('mousemove', (e) => {
-                if (!isDown) return;
-                e.preventDefault();
-                const x = e.pageX - container.offsetLeft;
-                const walk = (x - startX) * 2; // Multiplicador de velocidade do arrasto
-                container.scrollLeft = scrollLeft - walk;
-            });
+            let isDown = false; let startX; let scrollLeft;
+            container.addEventListener('mousedown', (e) => { isDown = true; slider.classList.add('grabbing'); startX = e.pageX - container.offsetLeft; scrollLeft = container.scrollLeft; slider.style.animationPlayState = 'paused'; });
+            container.addEventListener('mouseleave', () => { if (!isDown) return; isDown = false; slider.classList.remove('grabbing'); slider.style.animationPlayState = 'running'; });
+            container.addEventListener('mouseup', () => { if (!isDown) return; isDown = false; slider.classList.remove('grabbing'); slider.style.animationPlayState = 'running'; });
+            container.addEventListener('mousemove', (e) => { if (!isDown) return; e.preventDefault(); const x = e.pageX - container.offsetLeft; const walk = (x - startX) * 2; container.scrollLeft = scrollLeft - walk; });
         });
     </script>
 </body>
